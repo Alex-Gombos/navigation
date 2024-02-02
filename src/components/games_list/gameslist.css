@@ -1,0 +1,50 @@
+.games-container{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 20px; /* Adjust the spacing between cards */
+    text-align: center;
+  }
+
+.card-front{
+    width: clamp(300px, 20vw, 500px);
+    height: clamp(300px, 30vw, 500px);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    outline: none;
+    border-radius: 25px;
+}
+
+.title {
+    margin-top: 25px;
+}
+
+.card:hover .card-fader {
+    opacity: 1;
+    transform: scale(1.05) ease-in-out;
+  }
+  
+  .card.expanded .title {
+    margin-top: 50px; /* Adjust the margin-top as needed */
+    transition: margin-top 0.3s ease-in-out; /* Added transition for smooth effect */
+  }
+
+  .card.notExpanded .title {
+    margin-top: 0px; /* Adjust the margin-top as needed */
+    transition: margin-top 0.3s ease-in-out; /* Added transition for smooth effect */
+  }
